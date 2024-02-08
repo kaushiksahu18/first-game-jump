@@ -113,8 +113,8 @@ if (gameState) {
 		let chackOFsetX;
 		let chackOFsetY;
 		if (window.innerWidth < 768) {
-			chackOFsetX = 25;
-			chackOFsetY = 18;
+			chackOFsetX = 15;
+			chackOFsetY = 10;
 		} else {
 			chackOFsetX = 73;
 			chackOFsetY = 52;
