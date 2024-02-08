@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Game - HTML CSS JavaScript</title>
+	</head>
+	<body>
+		<div id="main" class="relative">
+			<div
+				id="score"
+				class="w-full h-16 bg-gray-800 text-white text-center text-2xl flex justify-center items-center"
+			>
+				Your Score: <span id="score-value">0</span>
+			</div>
+			<div
+				id="game-over"
+				class="w-full h-16 bg-gray-800 text-white text-center text-2xl flex justify-center items-center"
+			>
+				Wellcome To Kaushik ka first Game
+			</div>
+			<div id="game-contener" class="w-full h-[40%] absolute bottom-0">
+				<div
+					id="play-ground"
+					class="py-2 px-12 w-full h-full relative drop-shadow-2xl"
+				>
+					<div id="player" class="relative w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"></div>
+					<div id="enemy" class="relative translate-y-[-20px] lg:translate-y-[-50px] w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"></div>
+					<div
+						id="platform"
+						class="w-full h-1 bg-zinc-500 shadow-2xl relative bottom-4 lg:bottom-10"
+					></div>
+					<div
+						id="control-for-mobile"
+						class="flex justify-around items-center gap-4"
+					>
+						<div id="left-right" class="flex justify-between gap-4 items-center"">
+							<button
+							id="left"
+							class="w-24 h-8 bg-gray-800 text-white text-center text-2xl flex justify-center items-center"
+						>
+							Left
+						</button>
+						<button
+							id="right"
+							class="w-24 h-8 bg-gray-800 text-white text-center text-2xl flex justify-center items-center"
+						>
+							Right
+						</button>
+						</div>
+						<button id="jump" class="w-24 h-8 bg-gray-800 text-white text-center text-2xl flex justify-center items-center">Jump</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="main.js"></script>
+	</body>
+</html>

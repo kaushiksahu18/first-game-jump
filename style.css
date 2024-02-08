@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100dvw;
+	height: 100dvh;
+	overflow: hidden;
+	background-color: white;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#main {
+	height: 100%;
+	width: 100%;
+}
+
+#player {
+	background-image: url("./assets/img/player.jpg");
+	background-size: cover;
+	background-position: center;
+
+	transition: all 0.8s;
+}
+
+#enemy {
+	background-image: url("./assets/img/enemy.jpeg");
+	background-size: cover;
+	background-position: center;
+
+	transition: all 0.8s;
+}
+
+.jump-player {
+	animation: jump 0.8s linear;
+}
+@keyframes jump {
+	0% {
+		bottom: 0px;
+	}
+	50% {
+		bottom: 200px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+
+.enemy-attack {
+	animation: enemyAttack 5s linear infinite;
+}
+@keyframes enemyAttack {
+	0% {
+		left: 100vw;
+	}
+	100% {
+		left: -10vw;
+	}
+}
