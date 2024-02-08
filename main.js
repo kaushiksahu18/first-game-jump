@@ -50,7 +50,8 @@ const controlloer = () => {
 		console.log(e.key, e.code);
 		if (
 			(e.key === " " && e.code === "Space") ||
-			(e.key === "w" && e.code === "KeyW")
+			(e.key === "w" && e.code === "KeyW") ||
+			e.key === "ArrowUp"
 		) {
 			doJump();
 		}
