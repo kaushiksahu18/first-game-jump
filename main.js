@@ -110,8 +110,17 @@ if (gameState) {
 
 		const offsetX = Math.abs(px - ex);
 		const offsetY = Math.abs(py - ey);
+		let chackOFsetX;
+		let chackOFsetY;
+		if (window.innerWidth < 768) {
+			chackOFsetX = 25;
+			chackOFsetY = 18;
+		} else {
+			chackOFsetX = 73;
+			chackOFsetY = 52;
+		}
 
-		if (offsetX < 73 && offsetY < 52) {
+		if (offsetX < chackOFsetX && offsetY < chackOFsetY) {
 			gameover.play();
 			setTimeout(() => {
 				gameover.pause();
@@ -125,7 +134,7 @@ if (gameState) {
 					window.location.reload();
 				}
 			};
-		} else if (offsetX < 145 && cross) {
+		} else if (offsetX < chackOFsetX * 2 && cross) {
 			score += 10;
 			setTimeout(() => {
 				updateScore(score);
